@@ -1,0 +1,33 @@
+.Prototype {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 375px) {
+  .Prototype iframe {
+    width: 375px;
+    height: 450px;
+  }
+
+  .UserChallenges h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .UserChallenges p {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    padding: 10px 10px;
+  }
+
+  .Favorites p {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    padding: 10px 10px;
+  }
+}

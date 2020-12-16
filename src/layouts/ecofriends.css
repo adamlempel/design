@@ -1,0 +1,63 @@
+.iFrame {
+  scrolling: none;
+  border: none;
+}
+
+.Prototype {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 375px) {
+  .Hero .Logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .HeroGroup {
+    display: none;
+  }
+
+  .Hero {
+    height: 800px;
+  }
+  .Hero h1 {
+    font-size: 20px;
+  }
+
+  .Hero p {
+    font-size: 24px;
+  }
+
+  .CardGroup {
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
+  }
+  .Prototype iFrame {
+    height: 800px;
+    width: 375px;
+    scale: 20%;
+  }
+  .Cards {
+    display: gird;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+  }
+
+  .Cards h2 {
+    font-size: 30px;
+  }
+
+  .Cards h3 {
+    font-size: 18px;
+  }
+  .CV img {
+    width: 375px;
+  }
+
+  .Header {
+    display: none;
+  }
+}
