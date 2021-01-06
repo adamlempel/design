@@ -1,5 +1,6 @@
 @import url('https://use.typekit.net/iis5ems.css');
 
+html,
 body {
   font-family: anisette-std, sans-serif;
   font-weight: 400;
@@ -151,7 +152,7 @@ a {
   }
 
   .Cards {
-    display: gird;
+    display: grid;
     grid-template-columns: auto;
     justify-content: center;
     align-items: center;
