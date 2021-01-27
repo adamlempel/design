@@ -8,11 +8,23 @@ class Header extends React.Component {
 
     this.state = {
       hasScrolled: false,
+      open: false,
     }
   }
 
+  handleMenuClick = (event) => {
+    if(this.state.open === false) {
+      this.setState({ open: true });
+    } else {
+    this.setState({ open: false });
+    }
+    console.log(this.state.open);
+  }
+
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll);
+    // window.addEventListener('click', this.handleMenuClick);
+    console.log(this.state.open);
   }
   handleScroll = (event) => {
     const scrollTop = window.pageYOffset
@@ -23,7 +35,9 @@ class Header extends React.Component {
       this.setState({ hasScrolled: false })
     }
   }
+
   render() {
+
     return (
       <div
         className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}
@@ -53,23 +67,25 @@ class Header extends React.Component {
             />
           </path>
         </svg>
-        <div className="menu-btn">
+        <div className={`menu-btn ${ this.state.open ? 'open' : '' }`} onClick={() => this.handleMenuClick()}>
+          <div className="menu-btn_burger"></div>
+          <div className="menu-btn_burger"></div>
           <div className="menu-btn_burger"></div>
         </div>
         <div className="HeaderGroup">
           <div className="Logo">
             {' '}
-            <Link to="/">
+            <Link to="/" onClick={() => this.handleMenuClick()}>
               {' '}
               <h3>Adam Lempel</h3>
             </Link>
           </div>
-          <div className="NavItems">
-            <Link to="/projects" smooth=".2">
+          <div className={`NavItems ${ this.state.open ? 'open' : '' }`}>
+            <Link to="/projects" smooth=".2" onClick={() => this.handleMenuClick()}>
               Projects
             </Link>
-            <Link to="/about">About</Link>
-            <Link to="/Contact">
+            <Link to="/about" onClick={() => this.handleMenuClick()}>About</Link>
+            <Link to="/Contact" onClick={() => this.handleMenuClick()}>
               <button>Contact</button>
             </Link>
           </div>

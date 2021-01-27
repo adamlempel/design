@@ -95,3 +95,81 @@
     grid-template-columns: repeat(1, auto);
   }
 }
+
+
+/* Hamburger Menu Button */
+.menu-btn {
+  position: absolute;
+  top: 2.25rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+@media only screen and (min-width: 1000px) {
+  .menu-btn { display: none }
+}
+.menu-btn:focus {
+  outline: none;
+}
+.menu-btn .menu-btn_burger {
+  width: 2rem;
+  height: 0.25rem;
+  background: black;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+.menu-btn.open .menu-btn_burger:first-child {
+  transform: rotate(45deg)
+}
+.menu-btn.open .menu-btn_burger:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.menu-btn.open .menu-btn_burger:nth-child(3) {
+  transform: rotate(-45deg);
+}
+/* Vertical Hamburger Menu */
+@media only screen and (max-width: 1000px) {
+  .NavItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    height: 100vh;
+    text-align: left;
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+  }
+  .NavItems a {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 2rem 0;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s linear;
+  }
+  .NavItems a:hover {
+    color: gray;
+  }
+  /* Vertical Hamburger Menu Animation */
+  .NavItems.open {
+    transform: translateX(0%);
+    transition: transform 0.3s ease;
+  }
+}
