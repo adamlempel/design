@@ -11,6 +11,7 @@
 
 .FrameImg {
   width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 @media (max-width: 1200px) {
@@ -29,26 +30,29 @@
 @media (max-width: 800px) {
   .Frame {
     /* width: 700px; */
+    max-width: 600px;
   }
   .FrameImg {
-    width: 600px;
+    /* width: 600px; */
   }
 }
 
 @media (max-width: 640px) {
   .Frame {
     /* width: 500px; */
+    max-width: 420px;
   }
   .FrameImg {
-    width: 400px;
+    /* width: 400px; */
   }
 
   @media (max-width: 375px) {
     .Frame {
       /* width: 375px; */
+      max-width: 300px;
     }
     .FrameImg {
-      width: 375px;
+      /* width: 375px; */
     }
   }
 }

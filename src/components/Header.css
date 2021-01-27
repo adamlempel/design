@@ -16,7 +16,7 @@
 .HeaderGroup {
   max-width: 800;
   margin: 0 auto;
-  text-align: center;
+  /* text-align: center; */
   display: grid;
   grid-template-columns: repeat(4, auto);
   align-items: center;
