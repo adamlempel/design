@@ -25,6 +25,10 @@ class Header extends React.Component {
     window.addEventListener('scroll', this.handleScroll);
     // window.addEventListener('click', this.handleMenuClick);
     console.log(this.state.open);
+    this.checkMobile();
+  }
+  componentDidUpdate() {
+    this.checkMobile();
   }
   handleScroll = (event) => {
     const scrollTop = window.pageYOffset
@@ -33,6 +37,15 @@ class Header extends React.Component {
       this.setState({ hasScrolled: true })
     } else {
       this.setState({ hasScrolled: false })
+    }
+  }
+  checkMobile() {
+    const svg = document.querySelectorAll('svg');
+    var index = 0, length = svg.length;
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      for( ; index , length; index++) {
+        svg[index].style.background = "#FFFFFF";
+      }
     }
   }
 
