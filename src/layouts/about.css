@@ -16,3 +16,9 @@
 .a {
   color: black;
 }
+
+@media (max-width: 375px) {
+  .Resume {
+    display: none;
+  }
+}

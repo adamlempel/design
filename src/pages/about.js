@@ -27,7 +27,7 @@ const AboutPage = () => (
     <div className="Resume">
       <iframe
         width="1000"
-        height="500"
+        height="1200"
         src="https://docs.google.com/document/d/12NJE38Gees9au90YWqaVXn66oovRS29OEX5J43vdLzc/edit?usp=sharing"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
